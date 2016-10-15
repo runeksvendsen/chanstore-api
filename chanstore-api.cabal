@@ -1,0 +1,38 @@
+name:                chanstore-api
+version:             0.1.0.0
+synopsis:            
+homepage:            https://github.com/runeksvendsen/chanstore-api#readme
+license:             PublicDomain
+author:              Rune K. Svendsen
+maintainer:          runesvend@gmail.com
+category:            Finance Network Bitcoin
+build-type:          Simple
+cabal-version:       >=1.10
+
+
+library
+  hs-source-dirs:      src
+
+  exposed-modules:     ChanStore.API
+                       ChanStore.Types.Request
+
+  other-modules:
+
+  build-depends:       base >= 4.7 && < 5
+                     , bytestring
+                     , base16-bytestring
+                     , text
+                     , aeson
+                     , cereal
+                     , servant
+                     , bitcoin-payment-channel
+                     , haskoin-core == 0.4.0
+                     , string-conversions
+                     , time
+                     , haskell-rbpcp-api
+
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/runeksvendsen/chanstore-api
